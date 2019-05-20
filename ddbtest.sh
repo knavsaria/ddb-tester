@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo $0
-echo $1
 SECONDS=0
 table_name=$1
 
@@ -35,7 +33,7 @@ poll_describe_table() {
 	
 #create table, then wait until it is created (using built it 'cli' wait feature)
 
-aws dynamodb create-table --table-name $1 --attribute-definitions file://table_create_defs --key-schema file://table_create_key_schema --global-secondary-indexes file://table_create_gsi --provisioned-throughput file://table_create_throughput
+aws dynamodb create-table --table-name $table_name --attribute-definitions file://table_create_defs --key-schema file://table_create_key_schema --global-secondary-indexes file://table_create_gsi --provisioned-throughput file://table_create_throughput
 
 echo "Create table successfull. Waiting for it to become ACTIVE"
 aws dynamodb wait table-exists --table-name $table_name
