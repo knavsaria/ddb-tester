@@ -1,0 +1,10 @@
+[
+    {
+      "AttributeName": "SSOID",
+      "KeyType": "HASH"
+   },
+   {
+      "AttributeName": "SSOID-MUID",
+      "KeyType": "RANGE"
+   }
+  ]

@@ -1,0 +1,15 @@
+[
+  {"Create": {
+    "IndexName": "Index-3",
+    "KeySchema": [
+       {
+          "AttributeName": "NEWID",
+          "KeyType": "HASH"
+       }
+    ],
+    "Projection": {
+       "ProjectionType": "ALL"
+    }
+ }
+}
+  ]

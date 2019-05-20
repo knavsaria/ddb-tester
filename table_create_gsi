@@ -1,0 +1,35 @@
+[
+     {
+      "IndexName": "Index-1",
+      "KeySchema": [
+         {
+            "AttributeName": "NUID",
+            "KeyType": "HASH"
+         }
+      ],
+      "Projection": {
+         "ProjectionType": "ALL"
+      },
+      "ProvisionedThroughput": {
+        "ReadCapacityUnits": 1,
+        "WriteCapacityUnits": 2
+      }
+   },
+
+   {
+    "IndexName": "Index-2",
+    "KeySchema": [
+       {
+          "AttributeName": "NUID",
+          "KeyType": "HASH"
+       }
+    ],
+    "Projection": {
+       "ProjectionType": "ALL"
+    },
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 1,
+      "WriteCapacityUnits": 1
+    }
+ }
+  ]

@@ -1,0 +1,14 @@
+[
+     {
+        "AttributeName": "SSOID-MUID",
+        "AttributeType": "B"
+     },
+     {
+      "AttributeName": "SSOID",
+      "AttributeType": "N"
+     },
+     {
+        "AttributeName": "NUID",
+        "AttributeType": "S"
+     }
+  ]
