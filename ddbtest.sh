@@ -13,9 +13,9 @@ poll_describe_table() {
 		#check if any of the GSIs are busy being created
   	for index_status in $list
   	do
-    	if [ $index_status = 'CREATING' ]
+    	if [ $index_status = 'CREATING' ] || [ $index_status = 'UPDATING' ]
     	then
-    	echo 'still creating index, poll every 5 seconds'
+    	echo 'still creating or updating index, poll every 5 seconds'
     	sleep 5
     	status='creating'
     	fi
