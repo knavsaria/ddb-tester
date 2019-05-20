@@ -64,7 +64,7 @@ echo "Table update 2 complete"
 echo "Time taken: $(($update_2_duration / 60)) minutes and $(($update_2_duration % 60)) seconds"
 
 #delete table, then wait until it is deleted (using built in cli 'wait' feature
-echo "Starting table $table_name delete...
+echo "Starting table $table_name delete..."
 aws dynamodb delete-table --table-name $table_name
 aws dynamodb wait table-not-exists --table-name $table_name
 let delete_duration=$SECONDS-$create_duration-$update_1_duration-$update_2_duration
@@ -73,5 +73,5 @@ echo "Time taken: $(($delete_duration / 60)) minutes and $(($delete_duration % 6
 
 echo "================================================================="
 let total_test_time=$SECONDS
-echo "TOTAL TIME FOR TEST: $((total_test_time / 60)) minutes and $((total_test_time % 60)) seconds"
+echo "TOTAL TIME FOR TEST: $(($total_test_time / 60)) minutes and $(($total_test_time % 60)) seconds"
 exit 0
