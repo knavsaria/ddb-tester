@@ -68,4 +68,7 @@ delete_duration=$SECONDS
 echo "Table delete complete"
 echo "Time taken: $(($delete_duration / 60)) minutes and $(($delete_duration % 60)) seconds"
 
+echo "================================================================="
+let total_test_time=$create_duration+$update_1_duration+$update_2_duration+$delete_duration
+echo "TOTAL TIME FOR TEST: $((total_test_time / 60)) minutes and $((total_test_time % 60)) seconds"
 exit 0
