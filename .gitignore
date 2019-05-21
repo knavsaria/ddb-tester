@@ -1,2 +1,6 @@
 #ignore run output test files
 run*
+*test*.txt
+ddbtest2.sh
+test_wait.sh
+.gitignore
