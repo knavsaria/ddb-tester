@@ -4,3 +4,4 @@ run*
 ddbtest2.sh
 test_wait.sh
 .gitignore
+ddbtest.sh  
