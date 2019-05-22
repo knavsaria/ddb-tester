@@ -23,9 +23,10 @@ poll_describe_table() {
     	echo 'still creating or updating index, poll every 5 seconds'
     	sleep 5
     	status='creating'
+	continue
     	fi
   	done
-  	#check if the table is still updating, when the GSIs are all ACTIVE
+  	#if GSIs are done updating, check if the table is still updating (e.g. capacity updates)
   	table_status=$(aws dynamodb describe-table --table-name $table_name --query "Table.TableStatus" --output text)
 		if [ $table_status != 'ACTIVE' ] && [ $status = 'active' ]
   	then
